@@ -8,5 +8,8 @@ Las actividades estarán divididas en carpetas en la rama main.
 ### Actividades prácticas
 - [Tarea 1](./tarea1/index.html)
 ![Tarea 1](./tarea1/tarea1.png)
+- [Tarea 2](./tarea2/index.html)
+![Tarea 2](./tarea2/tarea2.png)
+
 
 
