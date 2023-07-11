@@ -10,6 +10,10 @@ Las actividades estarán divididas en carpetas en la rama main.
 ![Tarea 1](./tarea1/tarea1.png)
 - [Tarea 2](./tarea2/index.html)
 ![Tarea 2](./tarea2/tarea2.png)
+- [Tarea 3](./tarea3/index.html)
+![Tarea 3]()
+
+
 
 
 
