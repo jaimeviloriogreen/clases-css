@@ -172,8 +172,10 @@ hr{
     justify-content: space-around;
 }
 .card__title{
-    font-size: 1.125rem;
-    text-align: center;
+    font-size: 1rem;
+    text-align: start;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 .card__start-price{
     display: flex;
@@ -199,4 +201,10 @@ hr{
     font-weight: 600;
     color: #ffffff;
     cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+}
+
+.card__btn:hover{
+    background-color: #242b31;
+    transition: background-color 300ms ease-in;
 }
