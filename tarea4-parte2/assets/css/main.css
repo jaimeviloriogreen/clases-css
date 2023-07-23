@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: 7.5rem 1fr 2rem;
     position: fixed;
+    z-index: 2;
 }
 .header__logo{
     width: 100%;
@@ -40,7 +41,7 @@
     height: 100%;
     position: relative;
     top: 5rem;
-    z-index: -1;
+    z-index: 1;
 }
 .landing-page{
     background-color: var(--color5);
@@ -53,13 +54,14 @@
     overflow: hidden;
     position: relative;
     width: 90%;
+    padding: 2rem;
 }
 .landing-page__text{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 1fr 5rem;
-    padding: 3rem;
+    grid-template-rows: 1fr 10rem;
+
 }
 .landing-page__title{
     font-size: 3.75rem;
@@ -71,9 +73,7 @@
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
-.landing-page__paragraph{
-    margin-bottom: 1rem;
-}
+.landing-page__paragraph{margin-bottom: 1rem;}
 .landing-page__btn{
     width: 12rem;
     font-size: 1.125rem;
@@ -108,13 +108,12 @@
     justify-content: center;
     align-items: center;
 }
-.landing-page__chair{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    position: relative;
+.landing-page__chair{width: 100%; height: 100%;}
+.landing-page__icon{
+    width: 15rem;
+    position: absolute;
+    bottom: 0;
+    right: 3rem;
     z-index: 4;
 }
 .landing-page__box{
@@ -127,9 +126,6 @@
     border-radius: 100% 0% 5rem 0%;
     z-index: 3;
 }
-
-.landing-page__icon{width: 15rem;}
-
 /* Menu Ham */
 .header__checkbox{display: none;}
 .header__menu-ham{cursor: pointer; display: none;}
@@ -144,11 +140,7 @@
     margin: 3.125rem auto;
 }
 /* Services */
-.services{
-    width: 100%;
-    height: 100%;
-}
-
+.services{width: 100%;height: 100%;}
 .services__title{
     font-size: 2.125rem;
     text-align: center;
@@ -159,11 +151,49 @@
 .services__span{
     color: var(--color7);
 }
+.services-card{
+    width: calc(100% - 2rem);
+    height: 100%;
+    border-bottom: 1px solid rgb(156, 189, 210);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.services-card__items{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    grid-template-rows: 2.5rem 1fr;
+    grid-template-areas: "A B"
+                         "A C" ;
+}
+.services-card__icon{
+    width: 6rem;
+}
+.services-card__icon-box{
+    grid-area: A;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.services-card__title{
+    grid-area: B;
+    align-self: flex-end;
+}
+.services-card__paragraph{
+    grid-area: C;
+}
 
 /* Media Queries */
 @media screen and (max-width:992px) {
     html{
         font-size: 13px;
+    }
+    .landing-page{
+        grid-template-columns: 1fr;
     }
     .header__menu-ham{
         display: block;
@@ -194,8 +224,9 @@
         padding: 1rem;
     }
     .landing-page__icon{width: 14rem;}
-    .landing-page__chair{
-        justify-content: center;
+
+    .landing-page__text-social {
+        justify-content: flex-start;
         align-items: flex-end;
     }
 }
@@ -206,10 +237,6 @@
     .landing-page__box{
         width: 15rem;
         height: 10rem;
-    }
-    .landing-page__chair{
-        justify-content: center;
-        align-items: center;
     }
     .landing-page__icon {
         width: 10.5rem;
