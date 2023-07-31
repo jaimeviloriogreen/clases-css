@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caveflix</title>
     <link rel="stylesheet" href="src/css/main.css">
+    <script type="module" src="src/js/app.js"></script>
 </head>
 <body>
     <section class="hero-container">
@@ -37,9 +38,32 @@
             </section>
         </section>
         <div class="hero-bg-dark"></div>
+        <div class="hero-bg-gradient"></div>
     </section>
     <main class="main">
-        
+        <section class="popular">
+            <h2 class="popular__text">Más populares</h2>
+            <section class="popular__carrusel carrusel">
+                <div class="carrusel__left-arrow">
+                    <a href="#" class="carrusel__anchor">
+                        <img src="assets/icons/left-arrow.svg" alt="left">
+                    </a>
+                </div>
+                <div class="carrusel__movies movies">
+                    <div class="movies__one movie__card"></div>
+                    <div class="movies__two movie__card"></div>
+                    <div class="movies__three movie__card"></div>
+                    <div class="movies__four movie__card"></div>
+                    <div class="movies__five movie__card"></div>
+                </div>
+
+                <div class="carrusel__right-arrow">
+                    <a href="#" class="carrusel__anchor">
+                        <img src="assets/icons/right-icon.svg" alt="right">
+                    </a>
+                </div>
+            </section>
+        </section>
     </main>
 </body>
 </html>

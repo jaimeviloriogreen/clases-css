@@ -3,9 +3,9 @@
 :root{
     --color1: #ffffff;
     --color2: #000000;
-    --color3: #d4d4d4;
+    --color3: #dfdede;
 
-    --main-bg:#141414;
+    --main-bg:rgba(20,20,20,1);
     --logo-color:#e50914;
 
     --fuente1: 'Urbanist', sans-serif;
@@ -25,10 +25,12 @@ html{
 body{
     width: 100%;
     height:100vh;
-    background-color: var(--color3);
+    background: var(--main-bg);
+    word-wrap: break-word;
+    --letter-spacing:1.125px;
 }
-/* .main{
+.main{
     width: 90%;
     max-width: 62.5rem;
-    margin: 3.125rem auto;
-} */
+    margin: 1.5625rem auto;
+}
