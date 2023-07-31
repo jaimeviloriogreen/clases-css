@@ -16,6 +16,8 @@ Las actividades estarán divididas en carpetas en la rama main.
 ![Tarea 4](./tarea4-parte1/screenshot.png)
 - [Tarea 4 - Parte 2](./tarea4-parte2/index.html)
 ![Tarea 4](./tarea4-parte2/screenshot.png)
+- [Proyecto Final](./proyecto-final/index.html)
+![Tarea 1](./proyecto-final/screenshot.png)
 
 
 
