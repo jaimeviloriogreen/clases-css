@@ -97,7 +97,7 @@
     background-color:transparent;
     box-shadow: transparent;
     transition:background-color 300ms ease-in-out;
-    transition:box-shadow 200ms ease-in-out;
+    /* transition:box-shadow 200ms ease-in-out; */
 }
 .header__logo{
     align-self: center; 
@@ -154,7 +154,7 @@
 }
 .header--boxshadow{
      box-shadow: 1px 0px 1px 1px rgba(194, 194, 194, 0.2);
-     transition: box-shadow 200ms ease-in;
+     /* transition: box-shadow 200ms ease-in; */
 }
 /* Main */
 .popular__text, 
@@ -245,10 +245,11 @@
     height: 100%;
     /* margin: 0rem 2rem; */
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     grid-template-rows: repeat(3, 18rem);
+    grid-auto-rows: 18rem;
     margin-top: 1rem;
-    gap: 2rem 0rem;
+    gap: 2rem;
     justify-items: center;
 }
 .movies__img-online-one{background-image: url(../../assets/img/one-piece-movie.jpeg);}
@@ -263,14 +264,17 @@
 .movies__img-online-ten{background-image: url(../../assets/img/top-gun-movie.jpeg);}
 .movies__img-online-eleven{background-image: url(../../assets/img/batman-movie.jpeg);}
 .movies__img-online-twelve{background-image: url(../../assets/img/operacion-kandahar-movie.jpeg);}
+.movies__img-online-thirteen{background-image: url(../../assets/img/sisu-movie.jpeg);}
+.movies__img-online-fourteen{background-image: url(../../assets/img/el-piloto-movie.jpeg);}
+.movies__img-online-fifteen{background-image: url(../../assets/img/interstellar-movie.jpeg);}
 
 /* Media Queries */
 @media screen and (min-width:768px) and (max-width:992px){
     html{font-size: 14px;}
-    .online__movies{
+    /* .online__movies{
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 18rem);
-    }
+    } */
 }
 
 @media screen and (max-width:768px){
@@ -284,8 +288,8 @@
         align-self: center;
         cursor: pointer;
     }
-    .online__movies{
+    /* .online__movies{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(5, 18rem);
-    }
+    } */
 }

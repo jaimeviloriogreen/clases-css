@@ -6,7 +6,7 @@ window.addEventListener("scroll", ()=>{
         header.classList.add("header--boxshadow");
     };
     if(window.scrollY <= 20){
-        header.classList.remove("header--boxshadow");
         header.classList.remove("header--active");
+        header.classList.remove("header--boxshadow");
     };
 });
