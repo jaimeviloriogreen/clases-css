@@ -12,7 +12,7 @@
 .hero-bg-dark{
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0,.45);
+    background-color: rgba(0, 0, 0,.40);
     position: absolute;
     top: 0;
     left: 0;
@@ -26,7 +26,7 @@
     bottom: 0;
     left: 0;
     background:linear-gradient(0deg, rgba(20,20,20,1) 20%, rgba(0,0,0,0) 100%);
-    z-index: 4;
+    z-index: 3;
 
 }
 .hero{
@@ -39,12 +39,12 @@
     align-items: center;
 }
 .movie__info{
-    height: 50%;
+    height: 35%;
     padding: 2rem;
     width: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-
+    gap: 1rem;
 }
 .movie__title{
     font-size: 3rem;
@@ -65,8 +65,8 @@
     gap: 1rem;
 }
 .btn{
-    height: 2.90rem;
-    width: 13rem;
+    height: 3rem;
+    width: 14rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -80,7 +80,7 @@
 }
 .btn:hover{
     background-color: rgba(11, 11, 11, 0.9);
-    transition: background-color 300ms ease-in;
+    transition: background-color 200ms ease-in;
 }
 .btn__text{
     color: var(--color3);
@@ -93,9 +93,11 @@
     display: grid;
     grid-template-columns: 12rem 1fr 3rem;
     position: absolute;
-    z-index: 2;
+    z-index: 4;
     background-color:transparent;
+    box-shadow: transparent;
     transition:background-color 300ms ease-in-out;
+    transition:box-shadow 200ms ease-in-out;
 }
 .header__logo{
     align-self: center; 
@@ -111,31 +113,179 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
     list-style: none;
 }
+
 .header__anchor{
     text-decoration: none;
     color: var(--color3);
     font-size: 1.125rem;
     letter-spacing: var(--letter-spacing);
+    position: relative;
 }
-
+.header__expand-icon{
+    width: 1.25rem;
+    position: absolute;
+    top: 50%;
+    right: -1.15rem;
+    transform: translateY(-50%);
+}
+.header__menu-ham{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bd0912;
+    display: none;
+    border-radius: 100%;
+}
+.header__menu-ham-icon{
+    width: 2rem;
+}
+.header__checkbox{
+    display: none;
+}
+.header--active{
+    position: fixed;
+    background-color: var(--main-bg);
+    transition: background-color 300ms ease-in;
+}
+.header--boxshadow{
+     box-shadow: 1px 0px 1px 1px rgba(194, 194, 194, 0.2);
+     transition: box-shadow 200ms ease-in;
+}
 /* Main */
-.popular__text{
+.popular__text, 
+.online__text{
     position: relative;
     color: var(--color3);
     font-weight: 600;
     letter-spacing: var(--letter-spacing);
+    /* padding-left: 2rem; */
 }
 .popular__carrusel{
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 2rem 1fr 2rem;
+    margin-top: 1rem;
 }
-.header--active{
-    position: fixed;
-     background-color: var(--main-bg);
-     transition: background-color 300ms ease-in;
+.carrusel__movies{
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 18rem;
+    gap: 2rem;
+}
+.movie__card{
+    width: 10rem;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3.5rem;
+}
+.movie__img{
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.movies__img-one{background-image: url(../../assets/img/barbie-movie.jpeg);}
+.movies__img-two{background-image: url(../../assets/img/sirenita-movie.jpeg);}
+.movies__img-three{background-image: url(../../assets/img/flash-movie.jpeg);}
+.movies__img-four{background-image: url(../../assets/img/oppenheimer-img.jpeg);}
+.movies__img-five{background-image: url(../../assets/img/proyect-extraccion.jpeg);}
+.movies__img-six{background-image: url(../../assets/img/guardianes-de-la-galaxia-movie.jpeg);}
+.movies__img-seven{background-image: url(../../assets/img/paradise-movie.jpeg);}
+.movies__img-eight{background-image: url(../../assets/img/rapido-furioso-movie.jpeg);}
+.movies__img-nine{background-image: url(../../assets/img/jhon-wick-movie.jpeg);}
+.movies__img-ten{background-image: url(../../assets/img/elemental-movie.jpeg);}
+
+.movies__title{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color3);
+    letter-spacing: var(--letter-spacing);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.title__date{
+    font-size: 1rem;
+    color: rgb(213, 160, 95);
+}
+
+.carrusel__left-arrow{
+    align-self: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.carrusel__right-arrow{
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+}
+.online{
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+}
+.online__movies{
+    width: 100%;
+    height: 100%;
+    /* margin: 0rem 2rem; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 18rem);
+    margin-top: 1rem;
+    gap: 2rem 0rem;
+    justify-items: center;
+}
+.movies__img-online-one{background-image: url(../../assets/img/one-piece-movie.jpeg);}
+.movies__img-online-two{background-image: url(../../assets/img/san-andres-movie.jpeg);}
+.movies__img-online-three{background-image: url(../../assets/img/tyler-rake2-movie.jpeg);}
+.movies__img-online-four{background-image: url(../../assets/img/fresh-movie.jpeg);}
+.movies__img-online-five{background-image: url(../../assets/img/pacto-movie.jpeg);}
+.movies__img-online-six{background-image: url(../../assets/img/gato-con-botas-movie.jpeg);}
+.movies__img-online-seven{background-image: url(../../assets/img/creed-movie.jpeg);}
+.movies__img-online-eight{background-image: url(../../assets/img/screemVI-movie.jpeg);}
+.movies__img-online-nine{background-image: url(../../assets/img/it-movie.jpeg);}
+.movies__img-online-ten{background-image: url(../../assets/img/top-gun-movie.jpeg);}
+.movies__img-online-eleven{background-image: url(../../assets/img/batman-movie.jpeg);}
+.movies__img-online-twelve{background-image: url(../../assets/img/operacion-kandahar-movie.jpeg);}
+
+/* Media Queries */
+@media screen and (min-width:768px) and (max-width:992px){
+    html{font-size: 14px;}
+    .online__movies{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 18rem);
+    }
+}
+
+@media screen and (max-width:768px){
+    html{font-size: 12px;}
+    .header__nav{
+        display: none;
+    }
+    .header__menu-ham{
+        display: flex;
+        justify-self: flex-end;
+        align-self: center;
+        cursor: pointer;
+    }
+    .online__movies{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 18rem);
+    }
 }
